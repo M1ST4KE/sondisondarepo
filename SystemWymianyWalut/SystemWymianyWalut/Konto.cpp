@@ -51,7 +51,7 @@ void Konto::run()
 {
 	system("cls");
 
-	Waluta tablica = wczytajkursy(ilewalut());
+	Waluta tablica = wczytajkursy(5);
 	tablica.pokasz();
 	getchar();
 	getchar();
@@ -80,7 +80,7 @@ Waluta Konto::wczytajkursy(int n)
 	
 	
 	plik.close();
-	return *tablica;
+	return *tablica;//działa dokładnie tak samo jak tablica[0]
 }
 
 
@@ -127,13 +127,3 @@ void Konto::menu()
 }
 
 
-int Konto::ilewalut()
-{
-	string linia;
-	int licznik = 0;
-	fstream plik;
-	plik.open("kursy.txt");
-	while (getline(plik, linia)) licznik++;
-	plik.close();
-	return licznik;
-}
