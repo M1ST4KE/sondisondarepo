@@ -20,6 +20,7 @@ public:
 	void menu();
 	void run();
 	Waluta wczytajkursy(int n);
+	int ilewalut();
 	};
 
 class Prywatny: public Konto
