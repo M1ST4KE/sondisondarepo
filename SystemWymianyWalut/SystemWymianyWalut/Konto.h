@@ -19,7 +19,10 @@ public:
 	~Konto();
 	void menu();
 	void run();
+	//funkcja zwraca jeden obiekt
 	Waluta wczytajkursy(int n);
+	//żeby funkcja zwracała wskaźnik do tabicy obiektów, powinna wyglądać tak:
+	//Waluta* wczytajkursy(int);
 	};
 
 class Prywatny: public Konto
